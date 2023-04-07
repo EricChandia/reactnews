@@ -30,7 +30,9 @@ export default function Home({ product } : HomeProps){
         <SubscribeButton priceId={product.priceId}/>
       </section>
 
-      <Image src='/images/man_coding.png' alt='Man coding' width={600} height={400} quality={100}/>
+      {/* <Image src='/images/man_coding.png' alt='Man coding' width={600} height={400} quality={100}/> */}
+      <Image src='/images/971.jpg' alt='Man coding' width={700} height={500} quality={100}/>
+      {/* <a href="https://www.freepik.com/free-vector/laptop-with-program-code-isometric-icon-software-development-programming-applications-dark-neon_4102879.htm#query=react%20developer&position=7&from_view=search&track=ais">Image by fullvector</a> on Freepik */}
 
     </main>
 
