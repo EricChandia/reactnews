@@ -1,11 +1,13 @@
 import { GetServerSideProps } from "next"
-import { getSession } from "next-auth/react"
+import { getSession, useSession } from "next-auth/react"
 import { prismic_client } from "../../services/prismic";
 import { RichText } from "prismic-dom";
 import Head from "next/head";
 import styles from './post.module.scss'
 import { authOptions } from "../api/auth/[...nextauth]";
 import { Session, getServerSession } from "next-auth";
+import { useRouter } from "next/router";
+import { useEffect } from "react";
 
 interface PostProps{
     post: {
@@ -22,6 +24,15 @@ interface UserSession extends Session{
 }
 
 export default function Post({ post }: PostProps){
+    const { data:session }: { data: any} = useSession();
+    const router = useRouter();
+
+    useEffect(() => {
+        if(!session?.activeSubscription){
+            router.push(`/posts/preview/${post.slug}`)
+        }
+    }, [session]);
+
     return(
        <>
          <Head>
@@ -50,14 +61,14 @@ export const getServerSideProps:GetServerSideProps = async ({ req, res, params }
     const session:UserSession|null = await getServerSession(req, res, authOptions);
     const slug = params?.slug;
 
-    if(!session?.activeSubscription){
-        return{
-            redirect: {
-                destination: '/',
-                permanent: false,
-            }
-        }
-    }
+    // if(!session?.activeSubscription){
+    //     return{
+    //         redirect: {
+    //             destination: '/',
+    //             permanent: false,
+    //         }
+    //     }
+    // }
 
     const prismic = prismic_client;
 
