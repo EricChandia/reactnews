@@ -43,23 +43,22 @@
                 &:hover{
                     color: var(--white);
                 }
-
-
-                &.active{
-                    color: var(--white);
-                    font-weight: bold;
-                }
-        
-                &.active::after{
-                    content: '';
-                    height: 3px;
-                    border-radius: 3px 3px 0 0;
-                    position: absolute;
-                    bottom: 1px;
-                    left: 0;
-                    background-color: (--yellow-500);
-                }
             }
+
+            &.active{
+                color: var(--white);
+                font-weight: bold;
+                border-bottom: 1px solid var(--yellow-500);
+            }
+    
+            // &.active::after{
+            //     content: '';
+            //     height: 3px;
+            //     border-radius: 3px 3px 0 0;
+            //     bottom: 1px;
+            //     left: 0;
+            //     background-color: var(--yellow-500);
+            // }
         }
     }
 
