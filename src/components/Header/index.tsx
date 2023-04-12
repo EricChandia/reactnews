@@ -11,18 +11,21 @@ export function Header(){
     return(
         <header className={styles.headerContainer}>
             <div className={styles.headerContent}>
-                <Image src="/images/vercel.svg" alt="ig.news" width={50} height={50}/>
-            <nav>
-                <ActiveLink href='/' activeClassName={styles.active}>
-                    <div>Home</div>
-                </ActiveLink>
-                {/* <Link href='/posts' prefetch> <- desta forma irá carregar o posts antes de recusar abri-lo*/}
-                <ActiveLink href='/posts' activeClassName={styles.active}>
-                    <div>Posts</div>
-                </ActiveLink>
-            </nav>
+                <Link className={styles.logo} href='/'>   
+                    React News
+                </Link>
 
-            <SignInButton />
+                <nav>
+                    <ActiveLink href='/' activeClassName={styles.active}>
+                        <div>Home</div>
+                    </ActiveLink>
+                    {/* <Link href='/posts' prefetch> <- desta forma irá carregar o posts antes de recusar abri-lo*/}
+                    <ActiveLink href='/posts' activeClassName={styles.active}>
+                        <div>Posts</div>
+                    </ActiveLink>
+                </nav>
+
+                <SignInButton />
             </div>
         </header>
     )
