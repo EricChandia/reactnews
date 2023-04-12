@@ -60,7 +60,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
             billing_address_collection: 'required',
             line_items: [{
                 quantity: 1,
-                price: 'price_1MoGczCDILf8ZfjYHrrz4caH',
+                price: 'price_1MvMISCDILf8ZfjYVRXNjEvp',
             }],
             mode: 'subscription',
             allow_promotion_codes: true,
