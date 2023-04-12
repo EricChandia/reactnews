@@ -9,6 +9,7 @@
 
     --gray-100: #e1e1e6;
     --gray-300: #a8a8b3;
+    --gray-400: #babcd2;
     --gray-700: #323238;
     --gray-800: #29292e;
     --gray-850: #1f2729;
@@ -16,6 +17,14 @@
 
     --cyan-500: #61dafb;
     --yellow-500: #eba417;
+
+    --purple-300: #360BBD;
+    --purple-500: #3C18BE;
+    --purple-700: #11165A;
+
+    --pink-300: #D17894;
+
+    background-color: white;
 }
 
 @media (max-width: 1080px){
@@ -30,9 +39,21 @@
     }
 }
 
+html{
+    height: 100%;
+}
+
 body{
-    background-color: var(--gray-900);
     color: var(--white);
+    min-height: 100vh;
+    margin: 0;
+    background-color: #0C0D1D;
+}
+
+#__next {
+    height: 100%;
+    background:  radial-gradient(140% 107.13% at 50% 10%,transparent 37.41%,#63e 69.27%,#fff 100%);
+    background-image: radial-gradient(140% 107.13% at 50% 10%, transparent 37.41%, rgb(102, 51, 238) 69.27%, rgb(255, 255, 255) 100%);
 }
 
 body, input, textarea, select, button{
@@ -46,4 +67,20 @@ button{
 a {
     color: inherit;
     text-decoration: none;
+}
+
+h1{
+    white-space: pre-wrap;       /* Since CSS 2.1 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;
+}
+
+pre{
+    white-space: pre-wrap;       /* Since CSS 2.1 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;
 }
