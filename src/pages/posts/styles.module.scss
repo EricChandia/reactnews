@@ -1,12 +1,16 @@
 .container {
     max-width: 1120px;
     margin: 0 auto;
-    padding: 0 2rem;
+    margin-bottom: 4rem;
+    padding: 2rem 10%;
+
+    align-items: center;
+    display: flex;
+    justify-content: center;
 }
 
 .posts{
     max-width: 720px;
-    margin: 5rem auto 0;
 
     a{
         display: block;
@@ -33,7 +37,7 @@
         }
 
         p{
-            color: var(--gray-300);
+            color: var(--gray-400);
             margin-top: 0.5rem;
             line-height: 1.625rem;
         }

@@ -1,15 +1,19 @@
 .container{
-    max-width: 1120px;
     margin: 0 auto;
-    padding: 0 2rem;
+    height: 100%;
+    background-color: white;
+    color: black;
 }
 
 .post{
         max-width: 720px;
-        margin: 5rem auto 0;
+        margin: 0 auto 0;
+        padding: 2rem 2rem;
+        height: 100%;
+
 
         h1{
-            font-size: 3.5rem;
+            font-size: 3rem;
             font-weight:  900;
         }
 
@@ -24,7 +28,8 @@
             margin-top: 2rem;
             line-height: 2rem;
             font-size: 1.125rem;
-            color: var(--gray-100);
+            color: black;
+            width: 100%;
         
 
         p, ul{
@@ -41,7 +46,7 @@
 
         // se o postContent for tbm um previewContent o texto fica transparent
         &.previewContent { 
-            background: linear-gradient(var(--gray-100), transparent);
+            background: linear-gradient(var(--gray-300), transparent);
             background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -57,6 +62,7 @@
     font-size: 1.25rem;
     font-weight: bold;
     margin: 4rem 0 2rem;
+    color: white;
 
     span{
         color: var(--yellow-500);
