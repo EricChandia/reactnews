@@ -1,8 +1,8 @@
 .contentContainer{
     max-width: 1400px;
+    height: 90vh;
     margin: 0 auto;
-    padding: 0 2rem;
-    height: calc(100vh - 5rem);
+    padding: 2rem 2rem;
 
     display: flex;
     align-items: center;
@@ -17,6 +17,11 @@
         font-weight: bold;
     }
     
+    div{
+        font-size: 10rem;
+        line-height: 2rem;
+        font-weight: 900;
+    }
 
     h1{
         font-size: 4.5rem;
@@ -24,8 +29,16 @@
         font-weight: 900;
         margin-top: 2.5rem;
 
+        // background: radial-gradient(45% 100% at 50% 50%,#fff 30%,hsla(0, 0%, 100%, 0.4) 100%);
+        // -webkit-background-clip: text;
+        // -webkit-text-fill-color: transparent;
+        // background-clip: text;
+
         span{
-            color: var(--cyan-500);
+            background: var(--pink-300);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
     }
 
@@ -34,15 +47,26 @@
         line-height: 2.25rem;
         margin-top: 1.5rem;
 
-        span{
-            color: var(--cyan-500);
-            font-weight: bold;
-        }
-    }
+        background: radial-gradient(45% 100% at 50% 50%,#fff 30%,hsla(0, 0%, 100%, 0.4) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
 
+
+    }
+    span{
+        color: var(--yellow-500);
+        font-weight: bold;
+    }
     
     button{
         margin-top:2.5rem;
+    }
+}
+
+.heroImage{
+    @media (max-width: 1080px){
+        display: none;
     }
 }
 

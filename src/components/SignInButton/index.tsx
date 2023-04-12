@@ -10,9 +10,12 @@ export function SignInButton(){
 
     return status === 'authenticated' ? (
         <button type="button" className={styles.signInButton}>
-            <FaGithub color='#04d361'/>
-            {session.user?.name}
-            <FiX color='#737380' className={styles.closeIcon} onClick={() => signOut()}/>
+            <span className={styles.fullBtn}>
+                <FaGithub color='#04d361'/>
+                {session.user?.name}
+                <FiX color='#737380' className={styles.closeIcon} onClick={() => signOut()}/>
+            </span>
+            <span onClick={() => signOut()} className={styles.gitAbvUser}>{session?.user?.name?.slice(0, 1)}</span>
         </button>
     ) : (
         <button 
@@ -20,7 +23,7 @@ export function SignInButton(){
         className={styles.signInButton}
         onClick={() => signIn('github')}>
             <FaGithub color='#eba417'/>
-            Sign in with Github
+            <span className={styles.signInGit}>Sign in with Github</span>
         </button>
     )
 }
