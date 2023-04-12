@@ -5,12 +5,7 @@ import styles from './styles.module.scss';
 import { useRouter } from 'next/router';
 
 
-interface SubscribeButtonProps{
-    priceId: string;
-}
-
-
-export function SubscribeButton({ priceId }: SubscribeButtonProps) {
+export function SubscribeButton() {
 
     const { data:session, status }: { data:any, status:string } = useSession();
     const router = useRouter();
