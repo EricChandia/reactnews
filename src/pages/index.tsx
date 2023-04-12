@@ -4,7 +4,9 @@ import { SubscribeButton } from '../components/SubscribeButton';
 import styles from './home.module.scss';
 import { GetStaticProps } from 'next';
 import { stripe } from '../services/stripe';
-import laptop from '../../public/images/laptop.jpg'
+import laptop from '../../public/images/laptop2.png'
+import cup from '../../public/images/cup.png'
+
 
 interface HomeProps{
   product: {
@@ -32,18 +34,34 @@ export default function Home({ product } : HomeProps){
         <SubscribeButton priceId={product.priceId}/>
       </section>
 
-        <Image className={styles.heroImage} src={laptop} 
-        alt='A laptop'
-        quality={100}
-        width={700}
-        height={475}
-        sizes="100%"
-        style={{
-          width: '50%',
-          height: 'auto',
-        }}
-        />
-      {/* <Image src='/images/man_coding.png' alt='Man coding' width={600} height={400} quality={100}/> */}
+
+
+      <div className={styles.heroImage}>
+          <Image className={styles.cup} src={cup} 
+              alt='A cup of coffe'
+              quality={100}
+              priority={true}
+              style={{
+                width: '24%',
+                height: 'auto',
+                position: 'absolute',
+                
+              }}
+              />
+
+            <Image className={styles.laptop} src={laptop} 
+            alt='A laptop'
+            quality={100}
+            priority={true}
+            
+            style={{
+              width: '80%',
+              height: 'auto',
+              position: 'absolute',
+            }}
+            />
+      </div>
+
       {/* <a href="https://www.freepik.com/free-vector/laptop-with-program-code-isometric-icon-software-development-programming-applications-dark-neon_4102879.htm#query=react%20developer&position=7&from_view=search&track=ais">Image by fullvector</a> on Freepik */}
 
     </main>
