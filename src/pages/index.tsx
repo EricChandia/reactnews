@@ -11,7 +11,7 @@ import cup from '../../public/images/cup.png'
 interface HomeProps{
   product: {
     priceId: string;
-    amount: number;
+    amount: string;
   }
 }
 
@@ -31,7 +31,7 @@ export default function Home({ product } : HomeProps){
           
         </p>
         <span>for {product.amount}</span>
-        <SubscribeButton priceId={product.priceId}/>
+        <SubscribeButton/>
       </section>
 
 
@@ -53,7 +53,6 @@ export default function Home({ product } : HomeProps){
             alt='A laptop'
             quality={100}
             priority={true}
-            
             style={{
               width: '80%',
               height: 'auto',
