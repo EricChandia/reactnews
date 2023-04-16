@@ -49,7 +49,7 @@ export default function Posts({ posts } : PostProps){
 export const getStaticProps: GetStaticProps = async () => {
     const prismic = prismic_client;
 
-    const results = await prismic_client.getAllByType('publication', 
+    const results = await prismic.getAllByType('publication', 
     { 
         fetchLinks : ['publication.title', 'publication.content'],
         pageSize: 100 
