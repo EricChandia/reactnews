@@ -4,8 +4,7 @@ import { prismic_client } from "../../services/prismic";
 import { RichText } from "prismic-dom";
 import Head from "next/head";
 import styles from './post.module.scss'
-import { authOptions } from "../api/auth/[...nextauth]";
-import { Session, getServerSession } from "next-auth";
+import { Session } from "next-auth";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
 
@@ -56,7 +55,7 @@ export default function Post({ post }: PostProps){
 
 export const getServerSideProps:GetServerSideProps = async ({ req, res, params }) => {
     // const session = await getServerSession({ req });
-    const session:UserSession|null = await getServerSession(req, res, authOptions);
+    // const session:UserSession|null = await getServerSession(req, res, authOptions);
     const slug = params?.slug;
 
     // if(!session?.activeSubscription){
